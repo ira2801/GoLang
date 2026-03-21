@@ -76,12 +76,15 @@ import (
 	"sync/atomic"
 )
 
-func main() {
-	var counter int64
-	var wg sync.WaitGroup
+var (
+	counter int64
+	wg      sync.WaitGroup
 
-	evenCh := make(chan int)
-	oddCh := make(chan int)
+	evenCh = make(chan int)
+	oddCh  = make(chan int)
+)
+
+func main() {
 
 	wg.Add(2)
 
