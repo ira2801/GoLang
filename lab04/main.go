@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	generates := make(chan int)
+	generates := make(chan int, 10)
 	filters := make(chan int)
 	squares := make(chan int)
 	sums := make(chan int)
